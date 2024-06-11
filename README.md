@@ -3,11 +3,11 @@
 
 ## Projects
 These projects are made for the freeCodeCamp Responsive JavaScript Algorithm and Data Structures (Beta) Certification. The objective was to use HTML and plain CSS in order to build five responsive webpages that fulfill freeCodeCamp's user stories. You can find further information on the projects in the links below.
-* Cash Register: [Page](https://codepen.io/aarxa-the-sans/pen/XWwegYN)
-* Palindrome Checker: [Page](https://codepen.io/aarxa-the-sans/pen/pomWwxj)
-* Roman Numeral Converter: [Page](https://codepen.io/aarxa-the-sans/pen/eYaGRQd)
-* Pokémon Search App: [Page](https://codepen.io/aarxa-the-sans/pen/QWRqgzW) 
-* Telephone Number Validator: [Page](https://codepen.io/aarxa-the-sans/pen/YzbrQRv) 
+* Cash Register: [Page](https://codepen.io/aarxa-the-sans/full/XWwegYN)
+* Palindrome Checker: [Page](https://codepen.io/aarxa-the-sans/full/pomWwxj)
+* Roman Numeral Converter: [Page](https://codepen.io/aarxa-the-sans/full/eYaGRQd)
+* Pokémon Search App: [Page](https://codepen.io/aarxa-the-sans/full/QWRqgzW)
+* Telephone Number Validator: [Page](https://codepen.io/aarxa-the-sans/full/YzbrQRv)
 
 
 Made with :heartpulse:
