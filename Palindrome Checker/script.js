@@ -32,3 +32,4 @@ function showAlert(message) {
         alertBox.style.display = 'none';
     }, 3000);
 }
+
