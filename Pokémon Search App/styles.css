@@ -4,192 +4,159 @@
 /* Body styles */
 body {
   font-family: 'Aptos', sans-serif;
-  background-color: #f3f4f6;
-  background-image: url('https://mcdn.wallpapersafari.com/medium/83/36/LOTvo3.jpg');
-  background-size: 600px;
+  background-color: #d7ad06;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  background-attachment: fixed;
   background-position: center;
+  transition: background 300ms ease-in 200ms;
+  margin: 0;
 }
 
 /* Container styles */
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.flex {
+.container {
+  height: auto;
   display: flex;
-}
-
-.items-center {
   align-items: center;
-}
-
-.justify-center {
   justify-content: center;
-}
-
-.p-5 {
   padding: 1.25rem;
 }
 
 /* Card styles */
-.bg-white {
+.card {
   background-color: rgba(255, 255, 255, 0.8);
-}
-
-.rounded-lg {
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
-}
-
-.shadow-lg {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.p-8 {
   padding: 2rem;
-}
-
-.max-w-sm {
   max-width: 20rem;
-}
-
-.w-full {
   width: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-/* Heading styles */
-.text-2xl {
+.title {
   font-family: 'Pokemon Hollow', sans-serif;
   font-size: 1.75rem;
   line-height: 2rem;
-}
-
-.font-bold {
+  color: #4a5568;
   font-weight: bold;
-}
-
-.text-zinc-800 {
-  color: #4a5568; /* Zinc color */
+  margin-bottom: 1.5rem;
 }
 
 /* Input styles */
-.block {
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.label {
   display: block;
-}
-
-.text-sm {
   font-size: 0.875rem;
-}
-
-.mb-2 {
+  color: #718096;
   margin-bottom: 0.5rem;
 }
 
-.text-zinc-700 {
-  color: #718096; /* Zinc gray color */
+.input {
+  /*display: block;*/
+  width: 90%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  line-height: 1.25;
+  color: #718096;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.focus\:outline-none:focus {
+.input:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
-.focus\:shadow-outline:focus {
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
-}
-
-/* Button styles */
-.bg-purple-600 {
-  background-color: #e92929	; /* Purple color */
-}
-
-.hover\:bg-purple-700:hover {
-  background-color: #e92929	; /* Darker purple color on hover */
-}
-
-.text-white {
+.button {
+  background-color: #9b59b6;
   color: #ffffff;
-}
-
-.font-bold {
   font-weight: bold;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.rounded {
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2c073b;
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Search result styles */
+.hidden {
+  display: none;
+}
+
+.sprite {
+  width: 100%;
+  max-width: 20rem;
+  margin: 1rem auto;
+  animation: slideIn 0.5s forwards;
+}
+
+/* Types styles */
+.types {
+  margin-bottom: 1rem;
+}
+
+.pokemon-details {
+  margin-bottom: 1.5rem;
 }
 
 /* Table styles */
-.table-auto {
-  width: auto;
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.text-left {
+.stats-table th,
+.stats-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
   text-align: left;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.bg-purple-700 {
-  background-color: #805ad5; /* Dark purple color */
-}
-
-.text-white {
+.stats-table th {
+  background-color: #6a1b9a;
   color: #ffffff;
 }
 
-/* Pokémon stats styles */
-.border {
-  border-width: 1px;
+.stats-table td {
+  background-color: #8e44ad;
+  color: #ffffff;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-.bg-purple-600 {
-  background-color: #6b46c1; /* Purple color */
-}
-
-.bg-purple-500 {
-  background-color: #805ad5; /* Darker purple color */
-}
-
-/* Yellow box styles */
-.yellow-box {
-  background-color: #f6e05e; /* Yellow color */
-  color: #1a202c; /* Black color */
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+/* Sprite animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
