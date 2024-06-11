@@ -7,84 +7,78 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="min-h-screen bg-zinc-800 flex items-center justify-center p-5">
-    <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full">
-      <h1 class="text-2xl font-bold text-zinc-800 mb-6">Pokémon Search App</h1>
-      <div class="mb-4">
-        <label for="search" class="block text-zinc-700 text-sm font-bold mb-2"
-          >Search for Pokémon Name or ID:</label
-        >
+  <div class="container">
+    <div class="card">
+      <h1 class="title">Pokémon Search App</h1>
+      <div class="input-group">
+        <label for="search-input" class="label">Search for Pokémon Name or ID:</label>
         <input
           type="text"
           id="search-input"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="input"
           placeholder="e.g. Pikachu"
           required
         />
       </div>
-      <button id="search-button"
-        class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-6"
-      >
-        Search
-      </button>
-      <!-- Add a new div for displaying search result -->
-      <div id="search-result">
+      <button id="search-button" class="button">Search</button>
+      <div id="search-result" class="hidden">
         <div id="result-content"></div>
-        <div id="types" class="mb-4"></div>
-        <img id="sprite" src="" alt="" class="w-full max-w-sm mx-auto mb-4 hidden">
+        <div id="types" class="types"></div>
+        <img id="sprite" src="" alt="" class="sprite hidden">
       </div>
-
-      <div id="pokemon-details" class="mb-6"></div>
-      <table class="table-auto w-full">
-        <thead>
-          <tr class="text-left">
-            <th class="px-4 py-2 bg-purple-700 text-white">Base</th>
-            <th class="px-4 py-2 bg-purple-700 text-white">Stats</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Name:</td>
-            <td id="pokemon-name" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">ID:</td>
-            <td id="pokemon-id" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Weight:</td>
-            <td id="weight" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Height:</td>
-            <td id="height" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">HP:</td>
-            <td id="hp" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Attack:</td>
-            <td id="attack" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Defense:</td>
-            <td id="defense" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Special Attack:</td>
-            <td id="special-attack" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Special Defense:</td>
-            <td id="special-defense" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2 bg-purple-600 text-white">Speed:</td>
-            <td id="speed" class="border px-4 py-2 bg-purple-500 text-white"></td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="pokemon-details" class="pokemon-details">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Base</th>
+              <th>Stats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td id="pokemon-name"></td>
+            </tr>
+            <tr>
+              <td>ID:</td>
+              <td id="pokemon-id"></td>
+            </tr>
+            <tr>
+              <td>Weight:</td>
+              <td id="weight"></td>
+            </tr>
+            <tr>
+              <td>Height:</td>
+              <td id="height"></td>
+            </tr>
+            <tr>
+              <td>HP:</td>
+              <td id="hp"></td>
+            </tr>
+            <tr>
+              <td>Attack:</td>
+              <td id="attack"></td>
+            </tr>
+            <tr>
+              <td>Defense:</td>
+              <td id="defense"></td>
+            </tr>
+            <tr>
+              <td>Special Attack:</td>
+              <td id="special-attack"></td>
+            </tr>
+            <tr>
+              <td>Special Defense:</td>
+              <td id="special-defense"></td>
+            </tr>
+            <tr>
+              <td>Speed:</td>
+              <td id="speed"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
